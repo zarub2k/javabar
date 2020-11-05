@@ -9,5 +9,8 @@
         <module name="javabar" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="javabar" target="1.15" />
+    </bytecodeTargetLevel>
   </component>
 </project>
