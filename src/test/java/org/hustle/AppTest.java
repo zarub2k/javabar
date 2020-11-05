@@ -6,6 +6,7 @@ import org.junit.Test;
 
 /**
  * Unit test for simple App.
+ * @author tham
  */
 public class AppTest 
 {
@@ -16,5 +17,9 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
+    }
+
+    @Test
+    public void testMain() {
     }
 }
