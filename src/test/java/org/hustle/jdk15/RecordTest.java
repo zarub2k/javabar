@@ -16,12 +16,15 @@
  */
 package org.hustle.jdk15;
 
+import org.hustle.jdk15.record.LocalRecordExample;
 import org.hustle.jdk15.record.Rectangle;
 import org.hustle.jdk15.record.User;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.RecordComponent;
+import java.time.Month;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author tham
@@ -56,5 +59,11 @@ public class RecordTest {
 
         User userChild = new User("Jane", "Chennai", 12);
         System.out.println(userChild.name() + " can vote? " + userChild.canVote());
+    }
+
+    @Test
+    public void testReport() {
+        List<String> merchants = new LocalRecordExample().report(2020, Month.MARCH);
+        System.out.println(merchants);
     }
 }

@@ -14,22 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.hustle.jdk15.record;
+package org.hustle.jdk15;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
 
 /**
- * Record type example
  * @author tham
- *
- * https://docs.oracle.com/en/java/javase/15/language/records.html
- *
- * 1. Record class is explicitly final. So you can't extend
- * 2. Record class can implment one or more interfaces
- * 3. Annotation can be used on Record class and components
  */
-public record Rectangle(double length, double width) {
-    public Rectangle {
-        if (length <= 0 || width <= 0) {
-            throw new IllegalArgumentException("Length and Width should be greater than zero");
-        }
+public class VarExample {
+    public void simple() throws Exception {
+        var url = new URL("https://docs.oracle.com/");
+        var connection = url.openConnection();
+        var reader = new BufferedReader(new InputStreamReader(
+                connection.getInputStream()));
+
+        reader.lines().forEach(System.out::println);
     }
 }
