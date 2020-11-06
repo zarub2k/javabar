@@ -30,7 +30,7 @@ public class RecordTest {
     public void testRecord() {
         Rectangle rectangle = new Rectangle(5.0, 7.0);
         System.out.println("Length " + rectangle.length());
-        System.out.println("Width " + rectangle.widgh());
+        System.out.println("Width " + rectangle.width());
         System.out.println("toString() " + rectangle.toString());
         System.out.println("getClass() " + rectangle.getClass());
         System.out.println("getSuperClass() " + rectangle.getClass().getSuperclass());
@@ -40,5 +40,11 @@ public class RecordTest {
         System.out.println(aClass.isRecord());
         RecordComponent[] recordComponents = aClass.getRecordComponents();
         Arrays.stream(recordComponents).forEach(System.out::println);
+    }
+
+    @Test
+    public void testNegativeRecord() {
+        Rectangle rectangle = new Rectangle(0.0, 7.0);
+        System.out.println(rectangle.toString());
     }
 }

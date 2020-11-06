@@ -22,4 +22,10 @@ package org.hustle.jdk15.record;
  *
  * https://docs.oracle.com/en/java/javase/15/language/records.html
  */
-public record Rectangle(double length, double widgh) {}
+public record Rectangle(double length, double width) {
+    public Rectangle {
+        if (length <= 0 || width <= 0) {
+            throw new IllegalArgumentException("Length and Width should be greater than zero");
+        }
+    }
+}
