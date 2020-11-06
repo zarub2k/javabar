@@ -17,6 +17,7 @@
 package org.hustle.jdk15;
 
 import org.hustle.jdk15.record.Rectangle;
+import org.hustle.jdk15.record.User;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.RecordComponent;
@@ -46,5 +47,14 @@ public class RecordTest {
     public void testNegativeRecord() {
         Rectangle rectangle = new Rectangle(0.0, 7.0);
         System.out.println(rectangle.toString());
+    }
+
+    @Test
+    public void testRecordMethod() {
+        User userTham = new User("Tham", "Chennai", 42);
+        System.out.println(userTham.name() + " can vote? " + userTham.canVote());
+
+        User userChild = new User("Jane", "Chennai", 12);
+        System.out.println(userChild.name() + " can vote? " + userChild.canVote());
     }
 }
