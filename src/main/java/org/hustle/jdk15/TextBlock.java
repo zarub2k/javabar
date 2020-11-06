@@ -41,4 +41,13 @@ public class TextBlock {
 
         System.out.println(json);
     }
+
+    public void subString() {
+        String name = """
+                What is your name?
+                My name is 'Tham'
+                """;
+
+        System.out.println("Substring: " + name.substring(0, 18));
+    }
 }

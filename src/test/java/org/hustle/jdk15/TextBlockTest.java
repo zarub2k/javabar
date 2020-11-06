@@ -40,4 +40,8 @@ public class TextBlockTest {
         block.checkJson();
     }
 
+    @Test
+    public void testSubString() {
+        block.subString();
+    }
 }
