@@ -44,7 +44,7 @@ public class RecordTest {
     }
 
     @Test
-    public void testNegativeRecord() {
+    public void testRecordWithError() {
         Rectangle rectangle = new Rectangle(0.0, 7.0);
         System.out.println(rectangle.toString());
     }
