@@ -16,20 +16,15 @@
  */
 package org.hustle.jdk15.record;
 
+import java.time.LocalDate;
+
 /**
- * Record type example
  * @author tham
  *
- * https://docs.oracle.com/en/java/javase/15/language/records.html
- *
- * 1. Record class is explicitly final. So you can't extend
- * 2. Record class can implment one or more interfaces
- * 3. Annotation can be used on Record class and components
+ * Example for local Record class
  */
-public record Rectangle(@Required double length, @Required double width) {
-    public Rectangle {
-        if (length <= 0 || width <= 0) {
-            throw new IllegalArgumentException("Length and Width should be greater than zero");
-        }
-    }
+
+record Merchant(String name) {}
+record Sale(Merchant merchant, LocalDate date, double value) {}
+public class LocalRecordExample {
 }
