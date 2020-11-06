@@ -16,15 +16,28 @@
  */
 package org.hustle.jdk15;
 
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author tham
  */
 public class TextBlockTest {
+    private static TextBlock block;
+    @BeforeAll
+    public static void setup() {
+        System.out.println("Enters setup()");
+        block = new TextBlock();
+    }
+
     @Test
     public void testCheckEq() {
-        TextBlock block = new TextBlock();
         block.checkEq();
     }
+
+    @Test
+    public void testJson() {
+        block.checkJson();
+    }
+
 }

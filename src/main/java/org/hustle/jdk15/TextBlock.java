@@ -30,4 +30,15 @@ public class TextBlock {
 
         System.out.println("Is equal: " + value.equals(textBlock));
     }
+
+    public void checkJson() {
+        String json = """
+                {
+                    "name": "Tham",
+                    "city": "Chennai"
+                }
+                """;
+
+        System.out.println(json);
+    }
 }
