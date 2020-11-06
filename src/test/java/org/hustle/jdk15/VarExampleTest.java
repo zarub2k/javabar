@@ -16,15 +16,27 @@
  */
 package org.hustle.jdk15;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 /**
  * @author tham
  */
 public class VarExampleTest {
+    private static VarExample varExample;
+
+    @BeforeAll
+    public static void setup() {
+        varExample = new VarExample();
+    }
+
     @Test
     public void testSimple() throws Exception {
-        VarExample varExample = new VarExample();
         varExample.simple();
+    }
+
+    @Test
+    public void testVarFor() {
+        varExample.varFor();
     }
 }

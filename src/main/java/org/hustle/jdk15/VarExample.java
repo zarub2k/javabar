@@ -19,6 +19,7 @@ package org.hustle.jdk15;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.List;
 
 /**
  * @author tham
@@ -31,5 +32,12 @@ public class VarExample {
                 connection.getInputStream()));
 
         reader.lines().forEach(System.out::println);
+    }
+
+    public void varFor() {
+        var names = List.of("Tham", "Jane", "Josh");
+        for (var name: names) {
+            System.out.println(name);
+        }
     }
 }
