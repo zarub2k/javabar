@@ -23,8 +23,8 @@ import org.junit.Test;
  */
 public class TextBlockTest {
     @Test
-    public void testSample() {
+    public void testCheckEq() {
         TextBlock block = new TextBlock();
-        block.simple();
+        block.checkEq();
     }
 }

@@ -17,17 +17,17 @@
 package org.hustle.jdk15;
 
 /**
+ * Text block examples
  * @author tham
+ *
+ * https://docs.oracle.com/en/java/javase/15/text-blocks/index.html
  */
 public class TextBlock {
-    public void simple() {
-        String name = "Thamizh" +
-                "arasu";
-        System.out.println(name);
+    public void checkEq() {
+        String value = "Thamizharasu";
+        String textBlock = """
+                       Thamizharasu""";
 
-        String block = """
-                       Thamizh
-                       arasu""";
-        System.out.println(block);
+        System.out.println("Is equal: " + value.equals(textBlock));
     }
 }
