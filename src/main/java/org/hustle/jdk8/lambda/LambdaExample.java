@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
 public class LambdaExample {
     List<Person> persons = new ArrayList<>(8);
     {
-        System.out.println("Called");
         persons.add(new Person("Tham", 42));
         persons.add(new Person("Josh", 22));
         persons.add(new Person("Pollard", 7));
