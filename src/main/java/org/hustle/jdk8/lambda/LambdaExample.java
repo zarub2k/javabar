@@ -18,11 +18,15 @@ package org.hustle.jdk8.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
  * @author tham
+ *
+ * https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
  */
 public class LambdaExample {
     List<Person> persons = new ArrayList<>(8);
@@ -33,13 +37,46 @@ public class LambdaExample {
         persons.add(new Person("Kane", 50));
     }
 
+    public void forEach() {
+        List.of("Tham", "Josh", "Kane")
+            .forEach(new EmailAppendConsumer());
+    }
+
     public void filterByAge(int age) {
-        List<Person> filteredList = persons.stream()
+        List<String> filteredList = persons.stream()
                 .filter(new PersonPredicate(age))
+                .map(new EmailFunction())
                 .collect(Collectors.toList());
         System.out.println(filteredList);
     }
 
+    public void averageAge() {
+        double avgAge = persons.stream()
+                .mapToInt(Person::age)
+                .average()
+                .getAsDouble();
+        System.out.println("Average age: " + avgAge);
+    }
+
+    //Consumer to make changes made by Function (.forEach)
+    static class EmailAppendConsumer implements Consumer<String> {
+
+        @Override
+        public void accept(String s) {
+            System.out.println(s + ">H");
+        }
+    }
+
+    //Mapper to map - Function (.map)
+    static class EmailFunction implements Function<Person, String> {
+
+        @Override
+        public String apply(Person person) {
+            return person.name();
+        }
+    }
+
+    //Predicate to (.filter)
     static class PersonPredicate implements Predicate<Person> {
         int age;
         PersonPredicate(int age) {

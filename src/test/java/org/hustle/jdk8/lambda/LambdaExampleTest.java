@@ -34,4 +34,14 @@ public class LambdaExampleTest {
     public void testFilterByAge() {
         lambdaExample.filterByAge(5);
     }
+
+    @Test
+    public void testForEach() {
+        lambdaExample.forEach();
+    }
+
+    @Test
+    public void testAverageAge() {
+        lambdaExample.averageAge();
+    }
 }
