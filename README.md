@@ -7,6 +7,6 @@ https://docs.oracle.com/en/java/javase/index.html
 * [x] [Record classes](https://openjdk.java.net/jeps/384)
 * [ ] [Pattern matching for instanceof](https://openjdk.java.net/jeps/375)
 * [x] [Text blocks](https://openjdk.java.net/jeps/378)
-* [ ] [Sealed classes](https://openjdk.java.net/jeps/360)
+* [x] [Sealed classes](https://openjdk.java.net/jeps/360)
 * [ ] [Switch expressions](https://openjdk.java.net/jeps/361)
 * [ ] [Local variables](https://openjdk.java.net/jeps/286)
