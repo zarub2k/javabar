@@ -8,7 +8,7 @@ sealed interface IExpr permits ConstantExpr {
 }
 
 final class ConstantExpr implements IExpr {
-    private int val;
+    int val;
     ConstantExpr(int val) {
         this.val = val;
     }
