@@ -18,6 +18,14 @@ package org.hustle.jdk15.sealed;
 
 /**
  * @author tham
+ *
+ * Constraints:
+ * 1. Permitted classes should be available during compile time
+ * 2. Must have one of the modifiers in their sub-classes
+ *  a) final
+ *  b) sealed
+ *  c) non-sealed
+ * 3. All classes must by in the same module or same package
  */
 public sealed class Shape permits Circle, Square, Rectangle {
 }
