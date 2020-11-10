@@ -5,8 +5,14 @@ Hustle hub for experimenting Java language apis and features
 https://docs.oracle.com/en/java/javase/index.html
 #### New features
 * [x] [Record classes](https://openjdk.java.net/jeps/384)
-* [ ] [Pattern matching for instanceof](https://openjdk.java.net/jeps/375)
+* [x] [Pattern matching for instanceof](https://openjdk.java.net/jeps/375)
 * [x] [Text blocks](https://openjdk.java.net/jeps/378)
 * [x] [Sealed classes](https://openjdk.java.net/jeps/360)
-* [ ] [Switch expressions](https://openjdk.java.net/jeps/361)
-* [ ] [Local variables](https://openjdk.java.net/jeps/286)
+* [x] [Switch expressions](https://openjdk.java.net/jeps/361)
+* [x] [Local variables](https://openjdk.java.net/jeps/286)
+
+### JDK 8
+https://docs.oracle.com/javase/8/
+https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html
+#### New features
+* [ ] [Lambda expressions](https://openjdk.java.net/jeps/384)
