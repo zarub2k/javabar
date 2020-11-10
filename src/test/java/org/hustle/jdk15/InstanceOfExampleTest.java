@@ -30,5 +30,12 @@ public class InstanceOfExampleTest {
     public void testInstanceOfWithNew() {
         InstanceOfExample.instanceofWithNew(new Circle(3.0));
         InstanceOfExample.instanceofWithNew(new Rectangle(3.0, 5.0));
+        InstanceOfExample.instanceofWithNew(null);
+    }
+
+    @Test
+    public void testInstanceOfWithAnd() {
+        InstanceOfExample.instanceofWithAnd(new Circle(3.0));
+        InstanceOfExample.instanceofWithAnd(new Circle(6.0));
     }
 }

@@ -39,7 +39,20 @@ public class InstanceOfExample {
         } else if (shape instanceof Rectangle rectangle) {
             System.out.println("Rectangle: " + rectangle.length() +
                     ", " + rectangle.width());
+        } else {
+            System.out.println("The given shape is not supported");
         }
+    }
+
+    public static void instanceofWithAnd(Shape shape) {
+        if (shape instanceof Circle circle &&
+            circle.radius() > 3) {
+            System.out.println("It is a big circle");
+        } else {
+            System.out.println("It is a small circle");
+        }
+
+        //The or-case (||) will not be applicable here
     }
 }
 
