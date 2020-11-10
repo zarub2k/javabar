@@ -1,8 +1,9 @@
 # javabar
 Hustle hub for experimenting Java language apis and features
+https://docs.oracle.com/en/java/javase/index.html
 
 ### JDK 15
-https://docs.oracle.com/en/java/javase/index.html
+https://docs.oracle.com/en/java/javase/15/index.html
 #### New features
 * [x] [Record classes](https://openjdk.java.net/jeps/384)
 * [x] [Pattern matching for instanceof](https://openjdk.java.net/jeps/375)
