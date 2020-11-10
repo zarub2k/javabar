@@ -44,5 +44,4 @@ public class InstanceOfExample {
 }
 
 interface Shape {}
-record Circle(double radius) implements Shape {}
-record Rectangle(double length, double width) implements Shape {}
+

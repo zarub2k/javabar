@@ -14,21 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.hustle.jdk15;
+package org.hustle.jdk15.instance;
 
-import org.hustle.jdk15.instance.Circle;
-import org.hustle.jdk15.instance.InstanceOfExample;
-import org.hustle.jdk15.instance.Rectangle;
-import org.junit.jupiter.api.Test;
-
-/**
- * @author tham
- */
-public class InstanceOfExampleTest {
-
-    @Test
-    public void testInstanceOfWithNew() {
-        InstanceOfExample.instanceofWithNew(new Circle(3.0));
-        InstanceOfExample.instanceofWithNew(new Rectangle(3.0, 5.0));
-    }
+public record Rectangle(double length, double width) implements Shape {
 }
