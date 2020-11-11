@@ -1,4 +1,4 @@
-package org.hustle.jdk8.lambda;
+package org.hustle.jdk8;
 
 /**
  * @author tham

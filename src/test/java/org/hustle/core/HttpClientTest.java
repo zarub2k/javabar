@@ -14,34 +14,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.hustle.core.httpclient;
+package org.hustle.core;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
+import org.hustle.core.httpclient.JavabarHttpClient;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 import java.net.http.HttpResponse;
 
 /**
  * @author tham
  */
-public class JavabarHttpClient {
-    public HttpResponse<String> get(String uri) {
-        HttpClient client = HttpClient.newBuilder()
-                .build();
+public class HttpClientTest {
+    static JavabarHttpClient client;
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(uri))
-                .build();
+    @BeforeAll
+    public static void setup() {
+        client = new JavabarHttpClient();
+    }
 
-        try {
-            HttpResponse<String> response = client.send(request,
-                    HttpResponse.BodyHandlers.ofString());
-            return response;
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        return null;
+    @Test
+    public void testGet() {
+        HttpResponse<String> response = client.get("https://www.google.com/");
+        System.out.println(response.statusCode());
+        System.out.println(response.body());
     }
 }
