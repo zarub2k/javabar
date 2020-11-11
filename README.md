@@ -17,3 +17,7 @@ https://docs.oracle.com/javase/8/
 https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html
 #### New features
 * [ ] [Lambda expressions](https://openjdk.java.net/jeps/384)
+
+### Core
+Javadoc: https://docs.oracle.com/en/java/javase/15/docs/api/index.html
+* [ ] [Http Client](http://openjdk.java.net/groups/net/httpclient/)
