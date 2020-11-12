@@ -29,6 +29,12 @@ public class ThreadTest {
         ChildThread child = new ChildThread(count);
         Thread thread = new Thread(child, "Child Thread");
         thread.start();
+        System.out.println(thread.getName());
+        try {
+            thread.join(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         for (int i = 0; i < count; i++) {
             System.out.println("Main thread: " + i);
