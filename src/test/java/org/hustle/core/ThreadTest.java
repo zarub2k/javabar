@@ -22,16 +22,21 @@ import org.junit.jupiter.api.Test;
 /**
  * @author tham
  */
-public class RunnableTest {
+public class ThreadTest {
     @Test
-    public void runnableTest() {
-        int count = 10;
+    public void testRunnable() {
+        int count = 5;
         ChildThread child = new ChildThread(count);
         Thread thread = new Thread(child, "Child Thread");
         thread.start();
 
         for (int i = 0; i < count; i++) {
             System.out.println("Main thread: " + i);
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                System.out.println("Error in Main thread");
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ public class ChildThread implements Runnable {
         for (int i = 0; i < value; i++) {
             System.out.println("Child thread: " + i);
             try {
-                Thread.sleep(500);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 System.out.println("Error in child thread");
             }
