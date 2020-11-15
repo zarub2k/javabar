@@ -35,10 +35,12 @@ public class ExecutorsExample {
         );
         try {
             List<Future<String>> futures = executorService.invokeAll(callables);
+            System.out.println("Before get()");
             futures.forEach(stringFuture ->
             {
                 try {
-                    stringFuture.get();
+                    String value = stringFuture.get();
+                    System.out.println(value);
                 } catch (InterruptedException | ExecutionException e) {
                     e.printStackTrace();
                 }
