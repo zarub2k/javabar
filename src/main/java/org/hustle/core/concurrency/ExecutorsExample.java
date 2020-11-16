@@ -48,5 +48,7 @@ public class ExecutorsExample {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        executorService.shutdown();
     }
 }
