@@ -14,29 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.hustle.core;
+package org.hustle.core.concurrency;
 
-import org.hustle.core.concurrency.ExecutorsExample;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import java.util.concurrent.Callable;
 
 /**
  * @author tham
  */
-public class ConcurrencyTest {
-    static ExecutorsExample executors;
-    @BeforeAll
-    public static void setup() {
-        executors = new ExecutorsExample();
-    }
-
-    @Test
-    public void testThreadPool() {
-        executors.threadPool();
-    }
-
-    @Test
-    public void testScheduledThreadPool() {
-        executors.scheduledThreadPool();
+public class SimpleCallable implements Callable<String> {
+    @Override
+    public String call() throws Exception {
+        return "SimpleCallable:call()";
     }
 }

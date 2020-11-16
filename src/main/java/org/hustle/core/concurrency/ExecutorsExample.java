@@ -17,10 +17,10 @@
 package org.hustle.core.concurrency;
 
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
+
+import static java.util.concurrent.TimeUnit.HOURS;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * @author tham
@@ -50,5 +50,20 @@ public class ExecutorsExample {
         }
 
         executorService.shutdown();
+    }
+
+    public void scheduledThreadPool() {
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+//        System.out.println("Before one shot schedule");
+//        service.schedule(new SimpleCallable(), 5, SECONDS);
+
+        System.out.println("Before fixed rate");
+
+        Runnable beeper = () -> System.out.println("Beeper");
+        ScheduledFuture<?> scheduledFuture = service.scheduleAtFixedRate(beeper, 10, 10, SECONDS);
+        Runnable canceller = () -> scheduledFuture.cancel(false);
+        service.schedule(canceller, 1, HOURS);
+
+//        service.shutdown();
     }
 }
