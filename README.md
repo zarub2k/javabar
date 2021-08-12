@@ -2,6 +2,9 @@
 Hustle hub for experimenting Java language apis and features
 https://docs.oracle.com/en/java/javase/index.html
 
+### JDK 16
+https://docs.oracle.com/en/java/javase/16/index.html
+
 ### JDK 15
 https://docs.oracle.com/en/java/javase/15/index.html
 #### New features
