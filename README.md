@@ -5,6 +5,10 @@ https://docs.oracle.com/en/java/javase/index.html
 ### Open JDK
 https://openjdk.org/
 
+### JDK 17
+https://docs.oracle.com/en/java/javase/17/
+https://docs.oracle.com/en/java/javase/17/docs/api/index.html
+
 ### JDK 19
 https://docs.oracle.com/en/java/javase/19/
 https://docs.oracle.com/en/java/javase/19/docs/api/index.html
