@@ -39,3 +39,6 @@ https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html
 Javadoc: https://docs.oracle.com/en/java/javase/15/docs/api/index.html
 * [ ] [Http Client](http://openjdk.java.net/groups/net/httpclient/)
 * [ ] [Certificate based authentication](https://www.baeldung.com/java-https-client-certificate-authentication)
+
+### Misc
+https://www.happycoders.eu/java/how-to-switch-multiple-java-versions-windows/
