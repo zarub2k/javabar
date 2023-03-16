@@ -2,6 +2,9 @@
 Hustle hub for experimenting Java language apis and features
 https://docs.oracle.com/en/java/javase/index.html
 
+### General
+https://dev.java/
+
 ### Open JDK
 https://openjdk.org/
 
