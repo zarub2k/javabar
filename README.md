@@ -4,6 +4,7 @@ https://docs.oracle.com/en/java/javase/index.html
 
 ### General
 https://dev.java/
+https://blogs.oracle.com/javamagazine/
 
 ### Open JDK
 https://openjdk.org/
